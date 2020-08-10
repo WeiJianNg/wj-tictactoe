@@ -1,0 +1,176 @@
+.tiles {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid black;
+  max-height: 120px;
+  max-width: 120px;
+  text-align: center;
+  background-color: #d8dbe2;
+}
+
+/* Header Styling */
+.tic-tac-toe-header {
+  height: 15vh;
+  color: white;
+  background-color: #1b1b1e;
+}
+
+.tic-tac-toe-title {
+  font-size: 3vh;
+  display: block;
+  margin: 0;
+}
+
+/* Status Bar Styling */
+.main {
+  height: 100vh;
+  background-color: #373f51;
+}
+
+.status {
+  height: 15vh;
+  text-align: center;
+}
+
+.status-text {
+  font-size: 3vh;
+  font-weight: bold;
+  color: white;
+}
+
+.button-responsive {
+  font-size: 3vh;
+  padding: 2px 1em;
+}
+
+@media (max-width: 600px) {
+  .button-responsive {
+    padding: 2px 4px;
+    font-size: 2vh;
+    line-height: 1;
+    border-radius: 3px;
+  }
+
+  .status-text {
+    font-size: 2vh;
+    font-weight: bold;
+    color: white;
+  }
+}
+
+/* gameboard styling */
+.gameboard {
+  height: 80vh;
+  padding-top: 5vh;
+}
+
+.board-row {
+  height: 120px;
+  max-height: 120px;
+}
+
+/* CSS for Modal */
+.modal-header {
+  background-color: #373f51;
+  color: white;
+}
+
+.modal-body {
+  background-color: #a9bcd0;
+  color: white;
+}
+
+.gameMode:hover {
+  background-color: #58a4b0;
+}
+
+.gameMode {
+  border: 1px solid black;
+  text-align: center;
+  padding: 1em;
+  background-color: #d8dbe2;
+}
+
+.gameModeTitle {
+  color: white;
+  background-color: #1b1b1e;
+  font-weight: bold;
+  margin-top: 2em;
+  margin-bottom: 1em;
+  padding: 1em;
+  border: solid 1px black;
+}
+
+@media (min-width: 1300px) {
+  .tiles {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid black;
+    max-height: 180px;
+    max-width: 180px;
+    text-align: center;
+    background-color: #d8dbe2;
+  }
+
+  .board-row {
+    height: 180px;
+    max-height: 180px;
+  }
+}
+
+@media (max-width: 950px) {
+  .tiles {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid black;
+    max-height: 70px;
+    max-width: 70px;
+    text-align: center;
+    background-color: #d8dbe2;
+  }
+
+  .board-row {
+    height: 70px;
+    max-height: 70px;
+  }
+}
+
+/* For ipad */
+@media (min-width: 700px) and (min-height: 1000px) {
+  .tiles {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid black;
+    max-height: 180px;
+    max-width: 180px;
+    text-align: center;
+    background-color: #d8dbe2;
+  }
+
+  .board-row {
+    height: 180px;
+    max-height: 180px;
+  }
+}
+
+.player-o {
+  height: 80%;
+  width: 80%;
+  background-position: center;
+  background-image: url("./images/circle.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.player-x {
+  height: 80%;
+  width: 80%;
+  background-position: center;
+  background-image: url("./images/cross.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
