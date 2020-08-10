@@ -1,23 +1,18 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useRef } from "react";
 import { connect } from "react-redux";
 import { resetBoard, selectMode } from "../../actions";
 
 const StatusBar = ({ player, winStatus, resetBoard, selectMode }) => {
   let gameStatus = "";
-
   useEffect(() => {
     if (winStatus.win === true) {
-      gameStatus = `Player ${winStatus.winner.toUpperCase()} won the Game!`;
       setTimeout(() => {
-        window.alert(gameStatus);
+        window.alert(`Player ${winStatus.winner.toUpperCase()} won the Game!`);
       }, 50);
     } else if (winStatus.win === false && winStatus.winner === "nobody") {
-      gameStatus = `Game is a Tie`;
       setTimeout(() => {
-        window.alert(gameStatus);
+        window.alert(`Game is a Tie`);
       }, 50);
-    } else {
-      gameStatus = `Player ${player.toUpperCase()}'s Turn`;
     }
   }, [winStatus]);
 
@@ -43,7 +38,7 @@ const StatusBar = ({ player, winStatus, resetBoard, selectMode }) => {
           </div>
           <div className="col-12 col-md-4 d-flex justify-content-center align-items-center">
             <div
-              class="btn-group btn-group btn-group-sm"
+              className="btn-group btn-group btn-group-sm"
               role="group"
               aria-label="..."
             >
