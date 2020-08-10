@@ -10,7 +10,7 @@ const ModeModal = ({ selected, selectMode }) => {
   return (
     <Modal
       show={!selected}
-      animation={false}
+      animation={true}
       backdrop="static"
       size="lg"
       centered
