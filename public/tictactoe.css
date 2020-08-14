@@ -24,7 +24,7 @@
 
 /* Status Bar Styling */
 .main {
-  height: 100vh;
+  min-height: 100vh;
   background-color: #373f51;
 }
 

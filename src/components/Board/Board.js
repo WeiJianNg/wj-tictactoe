@@ -15,7 +15,7 @@ const Board = ({
   }, [board, checkWinner]);
 
   return (
-    <div className="d-flex" style={{ height: "70vh" }}>
+    <div className="d-flex" style={{ minHeight: "70vh" }}>
       <div className="container-fluid">
         <div className="container-fluid h-100">
           {[
