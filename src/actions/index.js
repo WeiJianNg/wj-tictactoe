@@ -18,7 +18,6 @@ export const updateGameState = (player, board, position, gameMode) => {
       },
     };
   } else {
-    console.log("hello");
     updatedBoard[botMove(updatedBoard)] = "bot";
     return {
       type: "UPDATE_GAMESTATE",
@@ -34,13 +33,6 @@ export const updateGameState = (player, board, position, gameMode) => {
 // Check if any players won the game and return the status of the Game
 // (i.e win or tie) and the player who won the game
 export const checkWinner = (gameBoard) => {
-  if (!gameBoard.includes(null)) {
-    return {
-      type: "CHECK_GAMESTATE",
-      payload: { win: false, winner: "nobody" },
-    };
-  }
-
   const winConditions = [
     [0, 1, 2],
     [3, 4, 5],
@@ -64,6 +56,13 @@ export const checkWinner = (gameBoard) => {
         payload: { win: true, winner: gameBoard[a] },
       };
     }
+  }
+
+  if (!gameBoard.includes(null)) {
+    return {
+      type: "CHECK_GAMESTATE",
+      payload: { win: false, winner: "nobody" },
+    };
   }
   return {
     type: "CHECK_GAMESTATE",
